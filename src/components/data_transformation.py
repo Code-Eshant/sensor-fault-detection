@@ -85,8 +85,8 @@ class DataTransformation:
 
             self.utils.save_object(file_path= preprocessor_path, obj= preprocessor)
 
-            train_arr = np.c[X_train_scale, np.array(y_train)]
-            test_arr = np.c[X_test_scale, np.array(y_test)]
+            train_arr = np.c_[X_train_scale, np.array(y_train)]
+            test_arr = np.c_[X_test_scale, np.array(y_test)]
 
 
             return (train_arr, test_arr, preprocessor_path)
