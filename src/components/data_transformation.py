@@ -21,7 +21,7 @@ class DataTransformationConfig:
     artifact_dir = os.path.join(artifact_folder)
     transform_train_file_path = os.path.join(artifact_folder, 'train.npy')
     transform_test_file_path = os.path.join(artifact_folder, 'test.npy')
-    transform_object_file_path = os.path.join(artifact_folder, artifact_dir, 'preprocessor.pkl')
+    transform_object_file_path = os.path.join(artifact_dir, 'preprocessor.pkl')
 
 
 class DataTransformation:
@@ -33,7 +33,7 @@ class DataTransformation:
         self.utils = Mainutils()
 
     @staticmethod
-    def get_data(self, feature_store_file_path: str) -> pd.DataFrame:
+    def get_data(feature_store_file_path: str) -> pd.DataFrame:
 
         try:
 

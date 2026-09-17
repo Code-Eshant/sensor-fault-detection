@@ -11,7 +11,7 @@ client = MongoClient(url)
 # create a database name and collection name
 
 DATABASE_NAME = "pwskills"
-COLLECTION_NAME = "wafer-fault"
+COLLECTION_NAME = 'waferfault'
 
 df = pd.read_csv("D:\ML Projects\Sensor Fault Detection Project\notebooks\wafer_23012020_041211.csv")
 

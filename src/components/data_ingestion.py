@@ -63,18 +63,17 @@ class DataIngestion:
             raise CustomException(e, sys)
 
 
-    def initiate_data_ingestion(self)-> Path:
+    def initiate_data_ingestion(self) -> Path:
 
         logging.info("Entered initiated_data_ingestion method of data_integration class")
 
         try:
-            feature_store_file_path = self.export_collection_as_dataframe()
+            feature_store_file_path = self.export_data_into_feature_store_file_path()
 
-            logging.info("got the data from MongoDB")
+            logging.info("got the data from mongodb")
 
-            logging.info("exited initiated_data_ingestion method of data ingestion class")
+            logging.info("exited initiate_data_ingestion methos of data ingestion class")
 
             return feature_store_file_path
-
         except Exception as e:
-            raise  CustomException(e, sys) from e
+            raise CustomException(e,sys) from e
